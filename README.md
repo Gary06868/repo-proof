@@ -36,22 +36,63 @@ RepoProof is for developers and maintainers who need the README to be true befor
 
 It is most useful when the project already works on your machine, but you are not sure a fresh clone can reproduce that path from the README alone.
 
-## Install
+## Install as an Agent Skill
 
-Preferred, where `gh skill` is available:
+RepoProof is a plain skill directory. The most reliable install path is to clone this repository into the skills folder your agent already reads.
 
-```sh
-gh skill install Gary06868/repo-proof repo-proof@v0.1.0
-```
+### Codex
 
-Manual installation:
+Project-local install:
 
 ```sh
 mkdir -p .agents/skills
 git clone https://github.com/Gary06868/repo-proof .agents/skills/repo-proof
 ```
 
-Compatible skill locations include `.agents/skills/repo-proof`, `~/.agents/skills/repo-proof`, `.codex/skills/repo-proof`, `.claude/skills/repo-proof`, `.cursor/skills/repo-proof`, `.github/skills/repo-proof`, and `.gemini/skills/repo-proof`.
+Codex user-level install:
+
+```sh
+mkdir -p ~/.codex/skills
+git clone https://github.com/Gary06868/repo-proof ~/.codex/skills/repo-proof
+```
+
+Then ask Codex:
+
+```text
+Use repo-proof to audit this repository README from a fresh clone.
+```
+
+### Claude Code
+
+Project-local install:
+
+```sh
+mkdir -p .claude/skills
+git clone https://github.com/Gary06868/repo-proof .claude/skills/repo-proof
+```
+
+Claude user-level install:
+
+```sh
+mkdir -p ~/.claude/skills
+git clone https://github.com/Gary06868/repo-proof ~/.claude/skills/repo-proof
+```
+
+Then ask Claude Code:
+
+```text
+Use repo-proof to prove this README from a fresh clone.
+```
+
+### Other agents and `gh skill`
+
+If your environment supports Open Agent Skills or `gh skill`, install RepoProof into the equivalent skill directory or run:
+
+```sh
+gh skill install Gary06868/repo-proof repo-proof
+```
+
+Compatible skill locations include `.agents/skills/repo-proof`, `~/.agents/skills/repo-proof`, `.codex/skills/repo-proof`, `~/.codex/skills/repo-proof`, `.claude/skills/repo-proof`, `~/.claude/skills/repo-proof`, `.cursor/skills/repo-proof`, `.github/skills/repo-proof`, and `.gemini/skills/repo-proof`.
 
 ## Three-minute first run
 
