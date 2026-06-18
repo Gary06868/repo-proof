@@ -35,5 +35,4 @@ The release is blocked if any command fails, if `repoproof-report.json` is inval
 
 ## Demo asset
 
-Use `docs/demo-script.md` as the capture script for the 15-30 second demo GIF. The GIF should show the failing fixture, the cleanroom proof, the minimal patch, and the generated report.
-
+Use `docs/demo-script.md` as the capture script for the 15-30 second demo GIF. The checked-in GIF is `assets/demo.gif`; `assets/demo-storyboard.svg` is the static fallback. The GIF should show the failing fixture, the cleanroom proof, the minimal patch, and the generated report.

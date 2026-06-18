@@ -140,9 +140,9 @@ The release dry-run writes a self-audit report plus `SHA256SUMS`, `sbom.spdx.jso
 
 ## Demo
 
-![RepoProof demo storyboard](assets/demo-storyboard.svg)
+![RepoProof demo](assets/demo.gif)
 
-The 30-second capture script lives in [docs/demo-script.md](docs/demo-script.md).
+The capture script lives in [docs/demo-script.md](docs/demo-script.md). A static storyboard is also available at [assets/demo-storyboard.svg](assets/demo-storyboard.svg).
 
 ## Roadmap
 

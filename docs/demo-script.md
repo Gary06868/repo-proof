@@ -1,6 +1,8 @@
-# 30 Second Demo Script
+# Demo GIF Script
 
 Goal: show that RepoProof catches a README that looks plausible but is false.
+
+The repository includes a generated GIF at `assets/demo.gif`. Regenerate or recapture it whenever the public first-run workflow changes.
 
 ## Capture plan
 
@@ -33,4 +35,3 @@ Goal: show that RepoProof catches a README that looks plausible but is false.
 - "CI can be green while README onboarding is broken."
 - "RepoProof treats README as the user contract."
 - "Fresh clone. Visible commands. Evidence report."
-
