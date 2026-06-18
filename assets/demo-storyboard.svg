@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="RepoProof demo storyboard">
+  <rect width="960" height="540" fill="#0f172a"/>
+  <rect x="40" y="40" width="880" height="460" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="70" y="95" fill="#f8fafc" font-family="Inter,Segoe UI,Arial" font-size="34" font-weight="700">RepoProof demo: Make your README true</text>
+  <g font-family="Consolas,Menlo,monospace" font-size="22">
+    <rect x="70" y="135" width="390" height="150" rx="10" fill="#020617" stroke="#475569"/>
+    <text x="95" y="180" fill="#93c5fd">README.md</text>
+    <text x="95" y="220" fill="#e2e8f0">$ npm install</text>
+    <text x="95" y="255" fill="#fca5a5">but packageManager = pnpm</text>
+    <rect x="500" y="135" width="350" height="150" rx="10" fill="#022c22" stroke="#10b981"/>
+    <text x="525" y="180" fill="#86efac">RepoProof audit</text>
+    <text x="525" y="220" fill="#e2e8f0">README_PACKAGE_MANAGER_</text>
+    <text x="525" y="255" fill="#e2e8f0">MISMATCH</text>
+    <rect x="70" y="330" width="390" height="95" rx="10" fill="#111827" stroke="#38bdf8"/>
+    <text x="95" y="370" fill="#bae6fd">Minimal patch</text>
+    <text x="95" y="405" fill="#e2e8f0">npm install -> pnpm install</text>
+    <rect x="500" y="330" width="350" height="95" rx="10" fill="#111827" stroke="#22c55e"/>
+    <text x="525" y="370" fill="#bbf7d0">Evidence report</text>
+    <text x="525" y="405" fill="#e2e8f0">commands, exits, durations</text>
+  </g>
+</svg>
+

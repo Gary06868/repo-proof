@@ -18,4 +18,7 @@ Run before opening a PR:
 
 ```sh
 pnpm verify
+pnpm release:dry-run
 ```
+
+Release-related changes should also update `docs/release-checklist.md`, the example report under `reports/examples/`, or the demo script when the public workflow changes.

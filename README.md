@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.svg" alt="RepoProof logo" width="120">
+</p>
+
 # RepoProof
 
 **Make your README true.**
@@ -21,19 +25,30 @@ RepoProof answers a different question:
 
 > If a stranger clones this repository today and follows the README, does it actually work?
 
+## Who should use it
+
+RepoProof is for developers and maintainers who need the README to be true before other people depend on it:
+
+- Open-source maintainers preparing a release or reviewing onboarding changes.
+- Developers publishing a GitHub project after local-only or AI-assisted work.
+- npm and PyPI package authors checking install, test, demo, and packaging instructions.
+- Teams that want a repeatable preflight before making a repository public.
+
+It is most useful when the project already works on your machine, but you are not sure a fresh clone can reproduce that path from the README alone.
+
 ## Install
 
 Preferred, where `gh skill` is available:
 
 ```sh
-gh skill install <owner>/repo-proof repo-proof@v0.1.0
+gh skill install Gary06868/repo-proof repo-proof@v0.1.0
 ```
 
 Manual installation:
 
 ```sh
 mkdir -p .agents/skills
-git clone https://github.com/<owner>/repo-proof .agents/skills/repo-proof
+git clone https://github.com/Gary06868/repo-proof .agents/skills/repo-proof
 ```
 
 Compatible skill locations include `.agents/skills/repo-proof`, `~/.agents/skills/repo-proof`, `.codex/skills/repo-proof`, `.claude/skills/repo-proof`, `.cursor/skills/repo-proof`, `.github/skills/repo-proof`, and `.gemini/skills/repo-proof`.
@@ -80,6 +95,8 @@ RepoProof never publishes, deploys, pushes, merges, or reads user secrets.
 - `repoproof-fixes.patch`
 - `repoproof-action.yml`
 
+See [reports/examples/before-after.md](reports/examples/before-after.md) for a compact before/after example.
+
 ## GitHub Action
 
 ```yaml
@@ -92,7 +109,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@<pinned-sha>
-      - uses: <owner>/repo-proof/action@v0.1.0
+      - uses: Gary06868/repo-proof/action@v0.1.0
         with:
           mode: audit
           profile: baseline
@@ -109,6 +126,23 @@ pnpm test:fixtures
 pnpm test:evals
 pnpm test:baseline
 ```
+
+## Release readiness
+
+RepoProof includes release packaging checks for itself:
+
+```sh
+pnpm verify
+pnpm release:dry-run
+```
+
+The release dry-run writes a self-audit report plus `SHA256SUMS`, `sbom.spdx.json`, and `release-manifest.json` under `.tmp/`. See [docs/release-checklist.md](docs/release-checklist.md).
+
+## Demo
+
+![RepoProof demo storyboard](assets/demo-storyboard.svg)
+
+The 30-second capture script lives in [docs/demo-script.md](docs/demo-script.md).
 
 ## Roadmap
 

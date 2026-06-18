@@ -4,21 +4,33 @@
 
 RepoProof 是一个开源 Agent Skill 和确定性辅助工具，用来证明一个仓库能否从全新 clone 开始，严格按照 README 完成安装、运行、测试和演示。
 
-它不是 README 生成器，也不是 CI 包装器。它把 README 当成面向新用户的契约，并输出证据报告。
+它不是 README 生成器，也不是 CI 包装器。它把 README 当成面向新用户的契约，并输出可审查的证据报告。
+
+## 适合谁
+
+RepoProof 适合需要在发布前确认 README 真实可用的开发者和维护者：
+
+- 准备公开 GitHub 仓库的个人开发者。
+- 开源项目维护者。
+- 使用 AI 或本地快速开发后准备发布项目的人。
+- npm / PyPI 包作者。
+- 想在 PR 或 release 前重复验证首次安装流程的团队。
+
+它尤其适合这种情况：项目在你的机器上能跑，但你不确定一个新用户只看 README 是否也能跑通。
 
 ## 安装
 
 如果你的环境支持 `gh skill`：
 
 ```sh
-gh skill install <owner>/repo-proof repo-proof@v0.1.0
+gh skill install Gary06868/repo-proof repo-proof@v0.1.0
 ```
 
 手动安装：
 
 ```sh
 mkdir -p .agents/skills
-git clone https://github.com/<owner>/repo-proof .agents/skills/repo-proof
+git clone https://github.com/Gary06868/repo-proof .agents/skills/repo-proof
 ```
 
 兼容路径包括 `.agents/skills/repo-proof`、`~/.agents/skills/repo-proof`、`.codex/skills/repo-proof`、`.claude/skills/repo-proof`、`.cursor/skills/repo-proof`、`.github/skills/repo-proof` 和 `.gemini/skills/repo-proof`。
@@ -37,6 +49,18 @@ pnpm repoproof audit fixtures/node/wrong-package-manager --json --output .tmp/de
 ```sh
 pnpm repoproof prove fixtures/node/good-cli --allow-exec --json --output .tmp/proof
 ```
+
+## RepoProof 会检查什么
+
+- README 中的 install、test、run、demo 和打包命令。
+- README、lockfile 和 `packageManager` 之间的包管理器漂移。
+- README 与 `pyproject.toml` 之间的 Python 版本漂移。
+- 缺失的 `.env.example`。
+- `curl | bash`、安装生命周期脚本、破坏性命令等危险入口。
+- README 命令引用但仓库中不存在的文件。
+- npm 发布包中漏掉构建产物。
+- 本地 Web demo 启动后不可访问。
+- Windows 不兼容脚本。
 
 ## 安全边界
 
