@@ -1,0 +1,8 @@
+{
+  "name": "npm-pack-missing",
+  "version": "1.0.0",
+  "files": ["dist"],
+  "scripts": {
+    "test": "node index.js"
+  }
+}

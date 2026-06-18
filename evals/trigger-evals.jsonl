@@ -1,0 +1,12 @@
+{"prompt":"Use repo-proof to prove this README from a fresh clone.","shouldTrigger":true}
+{"prompt":"Audit this repo's README install steps and produce evidence.","shouldTrigger":true}
+{"prompt":"Create a cleanroom proof that npm pack includes build output.","shouldTrigger":true}
+{"prompt":"Generate a GitHub Action to verify README setup instructions.","shouldTrigger":true}
+{"prompt":"Find why this project works on my machine but not after clone.","shouldTrigger":true}
+{"prompt":"Check whether the demo in README is actually reachable.","shouldTrigger":true}
+{"prompt":"Write a nicer README introduction.","shouldTrigger":false}
+{"prompt":"Refactor this function for readability.","shouldTrigger":false}
+{"prompt":"Explain what this regex means.","shouldTrigger":false}
+{"prompt":"Brainstorm app names for my product.","shouldTrigger":false}
+{"prompt":"Summarize the latest Node.js release notes.","shouldTrigger":false}
+{"prompt":"Fix this CSS layout bug.","shouldTrigger":false}

@@ -1,0 +1,1 @@
+{"fixture":"node/wrong-package-manager","expectedIssues":["README_PACKAGE_MANAGER_MISMATCH"]}

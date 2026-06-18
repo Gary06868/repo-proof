@@ -1,0 +1,45 @@
+name: RepoProof
+description: Prove that README install, run, test, and demo instructions match repository reality.
+author: RepoProof contributors
+branding:
+  icon: check-circle
+  color: green
+inputs:
+  mode:
+    description: audit or prove
+    required: false
+    default: audit
+  profile:
+    description: baseline, strict, or release
+    required: false
+    default: baseline
+  allow-exec:
+    description: Allow prove mode to execute repository commands.
+    required: false
+    default: "false"
+  fail-on:
+    description: none, warning, or error
+    required: false
+    default: error
+  report-format:
+    description: markdown,json,sarif
+    required: false
+    default: markdown,json
+  timeout-minutes:
+    description: Total command timeout budget.
+    required: false
+    default: "10"
+outputs:
+  report-path:
+    description: Path to the Markdown report.
+  json-path:
+    description: Path to the JSON report.
+  evidence-digest:
+    description: SHA256 digest of the JSON report.
+  summary:
+    description: Short RepoProof summary.
+  proof-status:
+    description: passed, failed, or blocked.
+runs:
+  using: node20
+  main: dist/index.mjs

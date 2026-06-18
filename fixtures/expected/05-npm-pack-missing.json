@@ -1,0 +1,1 @@
+{"fixture":"node/npm-pack-missing","expectedIssues":["NPM_PACK_MISSING_FILES"]}

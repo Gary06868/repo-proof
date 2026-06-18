@@ -1,0 +1,9 @@
+node_modules/
+.tmp/
+repoproof-output/
+coverage/
+*.log
+.env
+.git/
+.github/
+

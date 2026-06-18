@@ -1,0 +1,1 @@
+{"fixture":"node/missing-env-danger","expectedIssues":["MISSING_ENV_EXAMPLE","DANGEROUS_SCRIPT"]}

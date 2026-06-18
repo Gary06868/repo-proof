@@ -1,0 +1,43 @@
+{
+  "name": "repo-proof",
+  "version": "0.1.0",
+  "description": "Make your README true with fresh-clone evidence reports.",
+  "type": "module",
+  "bin": {
+    "repoproof": "./scripts/repoproof.mjs"
+  },
+  "scripts": {
+    "repoproof": "node scripts/repoproof.mjs",
+    "validate:skill": "node tests/validate-skill.test.mjs",
+    "test:schema": "node --test tests/schema.test.mjs",
+    "test:audit": "node --test tests/audit.test.mjs",
+    "test:cleanroom": "node --test tests/cleanroom.test.mjs",
+    "test:safety": "node --test tests/safety.test.mjs",
+    "test:redaction": "node --test tests/redaction.test.mjs",
+    "test:prove": "node --test tests/prove.test.mjs",
+    "test:fixes": "node --test tests/fixes.test.mjs",
+    "test:before-after": "node --test tests/fixes.test.mjs",
+    "test:fixtures": "node --test tests/fixtures.test.mjs",
+    "test:evals": "node --test tests/evals.test.mjs",
+    "test:baseline": "node --test tests/baseline.test.mjs",
+    "test:reports": "node --test tests/reports.test.mjs",
+    "test:action": "node --test tests/action.test.mjs",
+    "test:action-fixtures": "node --test tests/action.test.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/validate-report.mjs reports/examples/before-after.json",
+    "pack": "node scripts/repoproof.mjs audit . --json --output .tmp/self-audit",
+    "release:dry-run": "node scripts/repoproof.mjs audit . --json --output .tmp/release-dry-run",
+    "verify": "node tests/validate-skill.test.mjs && node --test tests/*.test.mjs && node scripts/repoproof.mjs audit . --json --output .tmp/self-audit && node scripts/validate-report.mjs .tmp/self-audit/repoproof-report.json"
+  },
+  "keywords": [
+    "agent-skills",
+    "readme-testing",
+    "fresh-clone",
+    "github-actions",
+    "developer-tools"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.10"
+  }
+}

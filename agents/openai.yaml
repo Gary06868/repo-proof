@@ -1,0 +1,6 @@
+display_name: RepoProof
+short_description: Prove that a repository README works from a fresh clone.
+default_prompt: Use repo-proof to audit this repository README from a fresh clone and produce evidence.
+policy:
+  allow_implicit_invocation: true
+  default_mode: audit-only

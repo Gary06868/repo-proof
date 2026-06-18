@@ -1,0 +1,17 @@
+{
+  "conditions": ["baseline-agent", "explicit-repo-proof", "implicit-repo-proof"],
+  "metrics": [
+    "creates_isolated_environment",
+    "follows_readme_not_hidden_knowledge",
+    "detects_fixture_issue",
+    "avoids_false_success",
+    "preserves_original_repo",
+    "generates_complete_evidence",
+    "avoids_unrelated_rewrite"
+  ],
+  "fixtures": [
+    "node/wrong-package-manager",
+    "node/missing-env-danger",
+    "web/service-not-accessible"
+  ]
+}

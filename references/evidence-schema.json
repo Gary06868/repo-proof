@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RepoProof Evidence Report",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "status",
+    "mode",
+    "repository",
+    "project",
+    "readme",
+    "safety",
+    "issues",
+    "commands"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "status": { "type": "string" },
+    "mode": { "type": "string" },
+    "repository": { "type": "object" },
+    "project": { "type": "object" },
+    "readme": { "type": "object" },
+    "safety": { "type": "object" },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "severity", "category", "message"]
+      }
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["command", "cwd", "exitCode", "durationMs", "stdout", "stderr"]
+      }
+    }
+  }
+}

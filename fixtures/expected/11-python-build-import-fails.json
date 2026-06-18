@@ -1,0 +1,1 @@
+{"fixture":"python/build-import-fails","expectedIssues":["PYTHON_VERSION_MISMATCH"]}

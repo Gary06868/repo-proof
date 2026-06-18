@@ -1,0 +1,8 @@
+{
+  "name": "windows-script",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rm -rf dist && cp -r src dist",
+    "test": "node index.js"
+  }
+}

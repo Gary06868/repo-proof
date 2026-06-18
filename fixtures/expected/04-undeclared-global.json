@@ -1,0 +1,1 @@
+{"fixture":"node/undeclared-global","expectedIssues":["UNDECLARED_GLOBAL_DEPENDENCY"]}

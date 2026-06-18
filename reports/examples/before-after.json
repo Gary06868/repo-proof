@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "mode": "fix",
+  "status": "fixed-pending-verification",
+  "repository": {
+    "path": "fixtures/node/wrong-package-manager",
+    "commit": null
+  },
+  "project": {
+    "type": "node",
+    "packageManager": "pnpm",
+    "runtime": "node",
+    "manifests": ["package.json"]
+  },
+  "readme": {
+    "path": "README.md",
+    "steps": [{"command": "npm install", "category": "install", "lang": "sh"}]
+  },
+  "safety": {
+    "defaultMode": "audit-only",
+    "allowExecRequired": true,
+    "sandbox": "best-effort-cleanroom-not-strong-isolation"
+  },
+  "cleanroom": {
+    "enabled": false,
+    "copyPath": null,
+    "rejected": []
+  },
+  "issues": [
+    {
+      "code": "README_PACKAGE_MANAGER_MISMATCH",
+      "severity": "error",
+      "category": "documentation",
+      "message": "README uses npm, but project declares pnpm.",
+      "details": {"expected": "pnpm", "actual": "npm"}
+    }
+  ],
+  "commands": [],
+  "fix": {
+    "mode": "dry-run",
+    "patchCount": 1,
+    "applied": false
+  }
+}

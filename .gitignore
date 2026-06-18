@@ -1,0 +1,7 @@
+node_modules/
+.tmp/
+repoproof-output/
+*.log
+dist/
+coverage/
+.env

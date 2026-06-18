@@ -1,0 +1,5 @@
+# Undeclared Global
+
+```sh
+serve .
+```

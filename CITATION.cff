@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: RepoProof
+message: "If you use RepoProof in research or tooling, please cite it."
+type: software
+authors:
+  - family-names: RepoProof Contributors
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/<owner>/repo-proof"
